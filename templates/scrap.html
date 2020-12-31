@@ -1,0 +1,33 @@
+<!doctype html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Scrap a data</title>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<h2>This POC is coded by Mohammad Ali for Active Buildings<br>
+
+	Click On the Button to Get Delhi Pollutants..!
+</h2>
+
+	{% with messages = get_flashed_messages() %}
+	{% for item in messages %}
+	<table>
+		<thead><tr><th>Pollutant-1</th><th>Pollutant-2</th><th>Pollutant-3</th><th>Pollutant-4</th><th>Pollutant-5</th><th>Pollutant-6</th></tr></thead>
+		<tbody>
+		<tr><td>{{item[0]}}</td><td>{{item[1]}}</td><td>{{item[2]}}</td><td>{{item[3]}}</td><td>{{item[4]}}</td><td>{{item[5]}}</td></tr>
+	
+		</tbody>
+		</table>
+
+	</TR>
+	{% endfor %}
+	{% endwith %}
+
+<form method="post" action="/" enctype="multipart/form-data">
+   
+    <p>
+		<input type="submit" value="Click To Scrap">
+	</p>
+</form>
