@@ -11,7 +11,7 @@ url = "https://air-quality.com/place/india/gurugram/d2853e61?lang=en&standard=aq
 
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def upload_form():
     return render_template('scrap.html')
 
